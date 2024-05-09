@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
+.pageBody {
+  min-width: 100vw;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: #fff;
+  color: #000;
+  font-family: 'Antic Didone', serif !important;
+}
+.pageBody .headingText {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+}
