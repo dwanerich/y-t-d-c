@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   const line1 =
-  "Welcome to Take Two Entertainment!"
+  "Welcome to Take Youth & Teen"
   const line2 =
     "Our mission is to provide comprehensive and personalized artist management services to help our clients achieve their goals and maximize their potential in the music industry.";
 

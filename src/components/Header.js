@@ -1,13 +1,13 @@
 import React from 'react';
-import take2Logo from '../img/take-two-wide.png';
+import wideBanner from '../img/ytdc.png';
 
 export const Header = () => {
   return (
     <div className="header">
       <center style={{ background: 'black' }}>
         <img
-          src={take2Logo}
-          alt="Take Two Logo"
+          src={wideBanner}
+          alt="Ytdc"
           style={{ width: '33%',
         backgroundColor: 'black'}}
         />

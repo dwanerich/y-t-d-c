@@ -98,7 +98,7 @@ const Service = ({ serviceData }) => {
                 transition: { duration: 1.5 },
               }}
               src={image}
-              alt={'Ariana Weisner'}
+              alt={'YTDC'}
               className={classes.bannerImg}
             />
           </div>
@@ -114,7 +114,7 @@ const Service = ({ serviceData }) => {
                 transition: { duration: 1.5 },
               }}
               src={image}
-              alt={'Take Two'}
+              alt={'YTDC'}
               className={classes.bannerImg}
             />
           </div>
