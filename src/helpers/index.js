@@ -1,6 +1,6 @@
-import image2 from '../img/baddie_cover-art.png';
-import image1 from '../img/about-services.gif';
-import image3 from '../img/myhood.png';
+import image1 from '../img/barclays-logo.jpg'
+import image2 from '../img/spectrum-logo.png'
+import image3 from '../img/pix-logo.png'
 
 
 export const deriveImageArrayFromCategory = (categoryAssets) => {
@@ -36,14 +36,14 @@ export const serviceData = [
   },
   {
     direction: 'reverse',
-    headline: 'VS THE KING',
+    headline: 'SPECTRUM ARENA',
     info: "BADDIE (COMING SOON)",
     image: image2,
     options: [],
   },
   {
     direction: 'basic',
-    headline: 'VS THE KING',
+    headline: 'PIX-11 NEWS',
     info: "THATS MY HOOD",
     image: image3,
     options: [],

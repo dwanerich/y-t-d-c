@@ -1,4 +1,4 @@
-import MyWrapper from './MyWrapper';
+// import MyWrapper from './MyWrapper';
 import { celebrityAssets } from '../img';
 import { deriveImageArrayFromCategory } from '../helpers';
 

@@ -1,12 +1,12 @@
 import './nav.css';
-import servicesImg from '../img/about-services.gif';
+import servicesImg from '../img/ytdc.png';
 import classes from './About.module.css';
 import { Header } from './Header';
 import { motion } from 'framer-motion';
 
 const About = () => {
   const line1 =
-  "Welcome to Take Youth & Teen"
+  "Welcome to Youth & Teen Dance Company"
   const line2 =
     "Our mission is to provide comprehensive and personalized artist management services to help our clients achieve their goals and maximize their potential in the music industry.";
 

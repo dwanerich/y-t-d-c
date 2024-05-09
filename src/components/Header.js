@@ -8,7 +8,7 @@ export const Header = () => {
         <img
           src={wideBanner}
           alt="Ytdc"
-          style={{ width: '33%',
+          style={{ width: '25%',
         backgroundColor: 'black'}}
         />
       </center>

@@ -2,7 +2,7 @@
 import { Header } from './Header';
 import Service from './Service/Service';
 import { serviceData } from '../helpers';
-// import ReactPlayer from "react-player"
+import YouTube from 'react-youtube';
 
 const Home = () => {
   return (
@@ -16,20 +16,22 @@ const Home = () => {
         <br />
 
         <div>
-          {/* <img
-            src={require('../img/full_service.gif')}
-            alt={'services'}
-            style={{ width: '70%', borderRadius: '40px' }}
-          /> */}
+
+         
         </div>
         {' '}
         <br />
 
-        <img
-            src={require('../img/full_service.gif')}
-            alt={'services'}
-            style={{ width: '70%', borderRadius: '40px' }}
-          />
+
+
+    
+
+{<YouTube videoId="sgIgeB0_ht4"
+alt={'services'}
+style={{ width: '70%', borderRadius: '40px' }}
+        />}
+
+
         {serviceData.map((service, id) => (
           <Service key={id} serviceData={service} />
         ))}
