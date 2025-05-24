@@ -1,1 +1,1 @@
-// JavaScript placeholder for interactive features
+// JS features coming soon
