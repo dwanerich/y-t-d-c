@@ -9,6 +9,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+   .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
 </head>
 <body>
   <nav class="navbar">
@@ -35,9 +50,14 @@
     <h2>From Hempstead to Hollywood</h2>
     <p>One of our youngest dancers just got invited to an audition in Los Angeles — so young they had to set up a trust. It’s proof of what’s possible when young talent is nurtured with care.</p>
     <div class="logos">
-      <img src="town.png" alt="Town of Hempstead">
+      <img src="town.png" alt="Town of Hempstead" title="Official Town of Hempstead Endorsement" />
+            <img src="village.png" alt="Village of Hempstead" title="The Village of Hempstead Endorsement" />
+      <img src="senate.png" alt="New York State Senate" title="New York State Senate Endorsement" />
+
+      <!-- <img src="town.png" alt="Town of Hempstead">
       <img src="village.png" alt="Village of Hempstead">
-      <img src="senate.png" alt="NYS Senate">
+      <img src="senate.png" alt="NYS Senate"> -->
+      
     </div>
   </section>
 

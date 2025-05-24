@@ -107,7 +107,8 @@ body {
 .btn:hover {
   background-color: white;
   color: #111;
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
 .btn.secondary {
