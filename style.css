@@ -1,50 +1,61 @@
 
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #111;
   color: white;
   text-align: center;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: black;
+}
+.navbar .logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
 .hero {
-  position: relative;
-  background: url('hero.png') no-repeat center center/cover;
+  background: url('hero_section.png') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6);
   padding: 40px;
-  width: 100%;
-}
-h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-p {
-  font-size: 1.2rem;
-}
-.buttons {
-  margin-top: 20px;
 }
 .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #ff3cac;
+  background: none;
   color: white;
+  border: 2px solid white;
+  padding: 12px 24px;
   text-decoration: none;
-  margin: 5px;
-  border-radius: 4px;
+  display: inline-block;
+  margin-top: 20px;
 }
-.btn.secondary {
-  background-color: #555;
+.impact, .recognition, .values, footer {
+  padding: 40px 20px;
 }
-section {
-  padding: 60px 20px;
+.recognition .logos img {
+  width: 120px;
+  margin: 0 15px;
+}
+.values h3 {
+  display: inline-block;
+  margin: 20px;
 }
 footer {
-  padding: 30px 10px;
-  background-color: #1a1a1a;
+  background: #1a1a1a;
 }
