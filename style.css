@@ -8,7 +8,7 @@ body {
 }
 .hero {
   position: relative;
-  background: url('hero.jpg') no-repeat center center/cover;
+  background: url('hero.png') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   align-items: center;
