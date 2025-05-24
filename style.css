@@ -82,15 +82,29 @@ body {
   font-size: 2rem;
   margin-bottom: 20px;
 }
-.logos img {
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: all 0.3s ease;
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
+
+.logos img {
+  width: 100px;
+  max-width: 25%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 .logos img:hover {
   opacity: 1;
-  filter: none;
   transform: scale(1.05);
+  filter: none;
 }
 
 /* Programs Section */
