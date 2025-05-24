@@ -200,13 +200,6 @@ body {
   font-weight: 600;
 }
 
-.counter-section {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding: 40px 0;
-}
-
 .video-modal {
   display: none;
   position: fixed;
