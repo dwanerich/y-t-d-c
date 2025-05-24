@@ -3,47 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YATPG | Youth & Teen Performing Arts Group</title>
+  <title>YATPG</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="navbar">
     <div class="logo">YATPG</div>
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Programs</a></li>
-      <li><a href="#">Contact</a></li>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <header class="hero">
-    <div class="overlay">
-      <h1>Belong. Move. Shine.</h1>
-      <a href="#" class="btn">Join Us</a>
+    <div class="hero-content">
+      <h1>Belong.<br>Move.<br>Shine.</h1>
+      <div class="hero-buttons">
+        <a href="#join" class="btn">Join Us</a>
+        <a href="#donate" class="btn secondary">Donate</a>
+      </div>
     </div>
+    <img src="hero-performer.jpg" alt="Youth Performer" class="hero-img" />
   </header>
 
-  <section class="impact">
+  <section class="impact" id="about">
     <h2>From Hempstead to Hollywood</h2>
-    <p>One of our youngest dancers just got invited to an audition in Los Angeles — so young they had to set up a trust. It's proof of what's possible when young talent is nurtured with care.</p>
-  </section>
-
-  <section class="recognition">
+    <p>One of our youngest dancers just got invited to an audition in Los Angeles — so young they had to set up a trust. It’s proof of what’s possible when young talent is nurtured with care.</p>
     <div class="logos">
-      <img src="town_of_hempstead_logo.png" alt="Town of Hempstead" />
-      <img src="village_of_hempstead_logo.png" alt="Village of Hempstead" />
-      <img src="nys_senate_logo.png" alt="NYS Senate" />
+      <img src="town.png" alt="Town of Hempstead">
+      <img src="village.png" alt="Village of Hempstead">
+      <img src="senate.png" alt="NYS Senate">
     </div>
   </section>
 
-  <section class="values">
-    <h3>PERFORMANCE</h3>
-    <h3>DISCIPLINE</h3>
-    <h3>MENTORSHIP</h3>
+  <section class="programs" id="programs">
+    <h2>Our Values</h2>
+    <div class="grid">
+      <div>Performance</div>
+      <div>Mentorship</div>
+      <div>Discipline</div>
+    </div>
   </section>
 
-  <footer>
-    <a href="#" class="btn">Support the Movement</a>
+  <footer id="contact">
+    <p>&copy; 2025 Youth & Teen Performing Arts Group</p>
+    <a href="https://cash.app/$dwanerich" class="btn">Support the Movement</a>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
