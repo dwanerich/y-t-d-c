@@ -78,6 +78,12 @@
 
   <!-- Pagination Dots -->
   <div class="swiper-pagination"></div>
+  <div class="autoplay-progress">
+  <svg viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="20"></circle>
+  </svg>
+  <span></span>
+</div>
 </div>
 
   <img src="hero-performer.jpg" alt="Youth Performer" class="hero-img" />
@@ -132,24 +138,32 @@
 
   <!-- carousel script -->
   <script>
-  const swiper = new Swiper('.swiper-container', {
+  const progressCircle = document.querySelector(".autoplay-progress svg circle");
+  const progressContent = document.querySelector(".autoplay-progress span");
+
+  const swiper = new Swiper(".swiper-container", {
     loop: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
     },
-    effect: 'fade',
+    effect: "fade",
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {
+      autoplayTimeLeft(s, time, progress) {
+        progressCircle.style.setProperty("--progress", progress);
+        progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+      },
     },
   });
 </script>
-
 
   <script src="script.js"></script>
 </body>
