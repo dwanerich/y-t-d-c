@@ -148,7 +148,7 @@ body {
   transition: stroke-dashoffset 0.3s;
 }
 
-/* dark light mode */
+/* Theme Toggle */
 .theme-toggle {
   position: absolute;
   top: 20px;
@@ -200,6 +200,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+/* Fade-in Animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -320,51 +321,7 @@ input:checked + .slider:before {
   font-weight: 600;
 }
 
-/* Video Modal */
-.video-modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.video-content {
-  position: relative;
-  width: 80%;
-  max-width: 800px;
-  margin: 100px auto;
-  background: #000;
-}
-
-.video-content iframe {
-  width: 100%;
-  height: 450px;
-}
-
-#closeVideo {
-  position: absolute;
-  top: 10px; right: 20px;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* Footer */
-footer {
-  background-color: #000;
-  color: #888;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  padding: 40px 20px;
-}
-
-footer .btn {
-  margin-top: 20px;
-}
-
-/* --- TEAM SECTION --- */
+/* Team Section — Full Image Cards */
 #team {
   background-color: #0a0a0a;
   color: #fff;
@@ -383,104 +340,59 @@ footer .btn {
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.team-member {
-  background-color: #1a1a1a;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
-  text-align: center;
+.team-member-image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  aspect-ratio: 4 / 5;
 }
 
-.team-img {
+.team-member-image-card img {
   width: 100%;
-  max-width: 180px;
-  height: 180px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 15px;
+  display: block;
   transition: transform 0.3s ease;
-  border: 3px solid #fff;
 }
 
-.team-member:hover .team-img {
+.team-member-image-card:hover img {
   transform: scale(1.05);
 }
 
-.team-member h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+.team-member-image-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  text-align: left;
 }
 
-.team-member p {
-  font-size: 1rem;
+.team-member-image-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.team-member-image-card p {
+  font-size: 0.95rem;
+  margin-top: 5px;
   color: #ccc;
 }
 
-.linkedin-icon {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 1.2rem;
-  color: #888;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.linkedin-icon:hover {
-  color: #fff;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    z-index: 1001;
-    position: relative;
-  }
-
-  .navbar ul {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    padding-top: 100px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
-  }
-
-  .navbar ul.active {
-    display: flex;
-  }
-
-  .navbar ul li {
-    margin: 30px 0;
-  }
-
-  .navbar ul li a {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    letter-spacing: 1px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-img {
-    width: 100%;
-    margin-top: 30px;
-  }
-}
+/* Video Modal */
+.video-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0,
