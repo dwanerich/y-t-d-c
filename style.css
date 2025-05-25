@@ -178,6 +178,50 @@ img {
   opacity: 0.8;
 }
 
+.programs-section {
+  padding: 80px 20px;
+  background-color: var(--bg-color);
+  text-align: center;
+}
+
+.programs-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.program-card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 30px 20px;
+  border-radius: 16px;
+  width: 280px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.program-card:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  transform: translateY(-8px);
+}
+
+.program-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.program-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-title {
