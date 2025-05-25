@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Youth & Teen Performing Arts Program</title>
@@ -24,6 +23,15 @@
     transform: translateY(0);
   }
 </style>
+
+<!-- carosel below -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- SwiperJS JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -36,6 +44,42 @@
   </ul>
 </nav>
   <header class="hero">
+    <!-- carocel here -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <video
+        class="carousel-video"
+        src="path_to_your_video1.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+    </div>
+    <!-- Slide 2 -->
+    <div class="swiper-slide">
+      <video
+        class="carousel-video"
+        src="path_to_your_video2.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+    </div>
+    <!-- Add more slides as needed -->
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
+  <!-- Pagination Dots -->
+  <div class="swiper-pagination"></div>
+</div>
+
   <img src="hero-performer.jpg" alt="Youth Performer" class="hero-img" />
   <div class="hero-content">
     <h1>Belong.<br>Move.<br>Shine.</h1>
@@ -85,6 +129,27 @@
     <a href="https://cash.app/$dwanerich" class="btn">Support the Movement</a>
   </footer>
   <a href="https://cash.app/$dwanerich" class="sticky-donate" target="_blank">Donate</a>
+
+  <!-- carousel script -->
+  <script>
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    effect: 'fade',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
 
   <script src="script.js"></script>
 </body>
