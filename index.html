@@ -1,70 +1,89 @@
+
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Who We Are – YATPAG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAW CHXLD Company</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">YATPAG</div>
-    <button id="theme-toggle" aria-label="Toggle theme">🌞/🌙</button>
+
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <div class="nav-menu" id="navMenu">
+      <a href="#hero" onclick="toggleMenu()">Home</a>
+      <a href="#pillars" onclick="toggleMenu()">Pillars</a>
+      <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+      <a href="#vision" onclick="toggleMenu()">Featured</a>
+      <a href="#join" onclick="toggleMenu()">Join</a>
+    </div>
+  </nav>
+  <div id="overlay" onclick="closeMenu()"></div>
+
+  <header id="hero">
+    <img src="assets/raw-chxld-logo.png" alt="RAW CHXLD Logo" class="logo" />
+    <h1>RAW CHXLD COMPANY</h1>
+    <p class="tagline">From Streets to Sovereignty — Building the Future in Real Time</p>
+    <div class="buttons">
+      <button onclick="scrollToSection('pillars')">Enter Movement</button>
+      <button onclick="scrollToSection('vision')">Watch the Vision</button>
+    </div>
   </header>
 
-  <main>
-
-    <!-- hero section -->
-    <section class="hero">
-  <div class="hero-overlay">
-    <h1 class="hero-title">BELONG. MOVE. SHINE.</h1>
-    <div class="hero-buttons">
-      <a href="#programs" class="hero-btn">Join Us</a>
-      <a href="#donate" class="hero-btn hero-btn-alt">Donate</a>
+  <section id="pillars">
+    <h2>The Pillars of RAW CHXLD</h2>
+    <div class="pillar-grid">
+      <div class="pillar"><h3>Music Production</h3><p>Multi-Platinum Level Studio Infrastructure</p></div>
+      <div class="pillar"><h3>Artist Development</h3><p>Strategic Coaching, Writing & Branding</p></div>
+      <div class="pillar"><h3>Sync Brief Execution</h3><p>Film, TV & Brand Sound Design</p></div>
+      <div class="pillar"><h3>Sports Mentorship</h3><p>Pipeline Guidance for Rising Athletes</p></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- offer section -->
-<section id="programs" class="programs-section">
-  <h2 class="section-title">What We Offer</h2>
-  <div class="programs-grid">
-    <div class="program-card">
-      <h3>Dance Training</h3>
-      <p>High-energy classes in hip hop, jazz, and contemporary styles for all skill levels.</p>
+  <section id="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item"><img src="assets/portfolio-producer.png"><div class="overlay">Multi-Platinum Producer</div></div>
+      <div class="portfolio-item"><img src="assets/portfolio-engineer.png"><div class="overlay">Audio Engineer</div></div>
+      <div class="portfolio-item"><img src="assets/portfolio-artist-dev.png"><div class="overlay">Artist Development</div></div>
+      <div class="portfolio-item"><img src="assets/portfolio-sync.png"><div class="overlay">Sync Licensing</div></div>
+      <div class="portfolio-item"><img src="assets/portfolio-sports.png"><div class="overlay">Sports Mentorship</div></div>
     </div>
-    <div class="program-card">
-      <h3>Creative Mentorship</h3>
-      <p>One-on-one and group mentorship to help youth grow artistically and personally.</p>
-    </div>
-    <div class="program-card">
-      <h3>Summer Programs</h3>
-      <p>Week-long intensives and pop-up workshops to keep kids moving during the summer.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
+  <section id="vision">
+    <h2 class="highlight-title">FEATURED VISION</h2>
+    <p class="highlight-sub">From Court to Culture</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/aPNiqgi-DLs"
+              title="NY Knicks Promo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+  </section>
 
-    <section id="team" class="team-section">
-      <h1 class="section-title">Who We Are</h1>
-      <div class="team-container">
-        <div class="team-member">
-          <img src="images/denise.jpg" alt="Denise Howell" />
-          <h2>Denise Howell</h2>
-          <p>Founder & Director</p>
-        </div>
-        <div class="team-member">
-          <img src="images/dwane.jpg" alt="Dwane Rich" />
-          <h2>Dwane Rich</h2>
-          <p>Tech Volunteer</p>
-        </div>
-        <div class="team-member">
-          <img src="images/phillip.jpg" alt="Phillip Culver" />
-          <h2>Phillip Culver</h2>
-          <p>Board Advisor</p>
-        </div>
-      </div>
-    </section>
-  </main>
-<script src="script.js"></script>
+  <section id="join">
+    <button class="cta">Join the Company</button>
+  </section>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      const overlay = document.getElementById('overlay');
+      nav.classList.toggle('show');
+      overlay.classList.toggle('active');
+    }
+    function closeMenu() {
+      document.getElementById('navMenu').classList.remove('show');
+      document.getElementById('overlay').classList.remove('active');
+    }
+  </script>
 </body>
 </html>
