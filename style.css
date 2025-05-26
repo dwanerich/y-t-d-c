@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+.parallax-bg {
+  background-image: url('assets/bg-texture.png'); /* replace with your texture or image */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
 .values-ui {
   background: #fff;
   padding: 80px 30px;
