@@ -78,6 +78,68 @@ body {
   background: transparent;
 }
 
+.programs-section {
+  background: #000;
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3em;
+  font-weight: 900;
+  margin-bottom: 60px;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.program-card {
+  background: #141414;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 0 transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(255, 110, 63, 0.2);
+}
+
+.program-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.program-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.program-info h3 {
+  color: #ff6e3f;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.program-info p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
 .testimonial-cards {
   display: flex;
   justify-content: center;
@@ -138,3 +200,65 @@ body {
   font-size: 0.9rem;
   color: #ccc;
 }
+
+.donate-section {
+  background: #000;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.section-title {
+  font-size: 3em;
+  font-weight: 900;
+  margin-bottom: 60px;
+}
+
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.donation-card {
+  background: #141414;
+  border: 2px solid #ff6e3f;
+  padding: 30px 20px;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.donation-card:hover {
+  transform: translateY(-5px);
+}
+
+.donation-card h3 {
+  font-size: 2rem;
+  color: #ff6e3f;
+  margin-bottom: 10px;
+}
+
+.donation-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.btn.donate-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #ff6e3f;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.btn.donate-btn:hover {
+  background: #d9522e;
+}
+
