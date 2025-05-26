@@ -14,20 +14,15 @@ body {
   margin-bottom: 60px;
 }
 
-.hero-video-wrapper {
+.gif-hero {
+  background: url('assets/images/hero.gif') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-}
-
-.hero-video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
 }
 
 .hero-content {
