@@ -2,121 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Youth & Teen Performing Arts Program</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Youth & Teen Drop-In Center</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <nav class="navbar">
+  <header class="header">
     <div class="logo">YATPAG</div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    <ul class="nav-links">
-      <li><a href="#about">about</a></li>
-      <li><a href="#programs">programs</a></li>
-      <li><a href="#contact">contact</a></li>
-    </ul>
-    <div class="theme-toggle">
-  <label class="switch">
-    <input type="checkbox" id="themeSwitcher">
-    <span class="slider round"></span>
-  </label>
-</div>
-
-  </nav>
-
-  <header class="hero">
-    <img src="hero-performer.jpg" alt="Youth Performer" class="hero-img" />
-    <div class="hero-content">
-      <h1>Belong.<br>Move.<br>Shine.</h1>
-      <div class="hero-buttons">
-        <a href="#" id="videoBtn" class="btn secondary">Join us</a>
-        <a href="#donate" class="btn secondary">Donate</a>
-      </div>
+    <div class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
+    <nav class="nav" id="nav-menu">
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <div id="videoModal" class="video-modal">
-    <div class="video-content">
-      <iframe src="https://www.youtube.com/embed/_TkEySTCmAI" frameborder="0" allowfullscreen></iframe>
-      <span id="closeVideo">&times;</span>
-    </div>
-  </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to a Safe Space for Youth</h2>
+    <p>Empowering teens through community and creativity.</p>
+  </section>
 
-  <section class="impact" id="about">
-    <h2>From Hempstead to Hollywood</h2>
-    <p>One of our youngest dancers just got invited to an audition in Los Angeles — so young they had to set up a trust. It’s proof of what’s possible when young talent is nurtured with care.</p>
-    <div class="logos">
-      <img src="town.png" alt="Town of Hempstead" title="Official Town of Hempstead Endorsement" />
-      <img src="village.png" alt="Village of Hempstead" title="The Village of Hempstead Endorsement" />
-      <img src="senate.png" alt="New York State Senate" title="New York State Senate Endorsement" />
+  <!-- Team Section -->
+  <section id="team" class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-cards">
+      <div class="team-card">
+        <img src="images/denise.jpg" alt="Denise Howell" />
+        <div class="card-content">
+          <h3>Denise Howell</h3>
+          <p>Founder & Executive Director</p>
+          <p>Denise leads YATPAG with vision and dedication, fostering youth empowerment through the arts.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="images/dwane.jpg" alt="Dwane Rich" />
+        <div class="card-content">
+          <h3>Dwane Rich</h3>
+          <p>Technical Director & Digital Strategist</p>
+          <p>Dwane architects YATPAG’s digital presence, ensuring a seamless and impactful online experience.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="images/phillip.jpg" alt="Phillip Culver" />
+        <div class="card-content">
+          <h3>Phillip Culver</h3>
+          <p>Board Advisor, Strategic Operations</p>
+          <p>Phillip offers seasoned guidance in operations, steering YATPAG’s strategic growth and sustainability.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="programs" id="programs">
-    <h2>Our Values</h2>
-    <div class="grid">
-      <div>Performance</div>
-      <div>Mentorship</div>
-      <div>Discipline</div>
-    </div>
-  </section>
-
- <section class="bg-black-900 py-16 px-8">
-
-  <h2 class="text-4xl font-extrabold text-white mb-12 text-center">Meet Our Team</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-    
-    <!-- Team Member Card -->
-    <div class="relative h-96 rounded-2xl overflow-hidden group shadow-xl">
-      <img src="images/denise.jpeg" alt="Denise Howell" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-      <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
-        <h3 class="text-white text-2xl font-bold">Denise Howell</h3>
-        <p class="text-gray-300 text-sm">Founder</p>
-        <p class="text-gray-400 text-xs mt-2">Denise is the heart behind YATPAG, leading with vision, care, and commitment to youth empowerment.
-
-</p>
-      </div>
-    </div>
-
-    <!-- Repeat for each team member -->
-    <div class="relative h-96 rounded-2xl overflow-hidden group shadow-xl">
-      <img src="images/dwane.jpeg" alt="Dwane Rich" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-      <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
-        <h3 class="text-white text-2xl font-bold">Dwane Rich</h3>
-        <p class="text-gray-300 text-sm">Technical Director & Digital Strategist</p>
-        <p class="text-gray-400 text-xs mt-2">Dwane Rich drives the creative vision of YATPAG, blending culture, tech, and purpose to inspire the next generation.</p>
-      </div>
-    </div>
-
-    <div class="relative h-96 rounded-2xl overflow-hidden group shadow-xl">
-      <img src="images/phillip.jpeg" alt="Phillip Culver" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-      <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
-        <h3 class="text-white text-2xl font-bold">Phillip Culver</h3>
-        <p class="text-gray-300 text-sm">Board Advisor, Strategic Operations</p>
-        <p class="text-gray-400 text-xs mt-2">Phillip Culver brings seasoned leadership in real estate and operations, guiding YATPAG’s strategic growth and sustainability.</p>
-      </div>
-    </div>
-
-   
-    </div>
-
-  </div>
-</section>
-
-
-
-  <footer id="contact">
-    <p>&copy; 2025 Youth & Teen Performing Arts Group</p>
-    <a href="https://cash.app/$dvhowell" class="btn">Support the Movement</a>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Youth & Teen Drop-In Center. All rights reserved.</p>
   </footer>
-
-  <a href="https://cash.app/$dvhowell" class="sticky-donate" target="_blank">Donate</a>
-
-  <script src="script.js"></script>
 </body>
 </html>
