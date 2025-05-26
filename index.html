@@ -1,89 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RAW CHXLD Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youth & Teen Performing Arts Program</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* TEAM SECTION STYLING */
+    #team {
+      background-color: #0a0a0a;
+      color: #fff;
+      padding: 60px 20px;
+      font-family: 'Outfit', sans-serif;
+    }
+    #team h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .team-member {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+    }
+    .team-member h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .team-member p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="logo">YATPAG</div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#programs">programs</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <div class="theme-toggle">
+  <label class="switch">
+    <input type="checkbox" id="themeSwitcher">
+    <span class="slider round"></span>
+  </label>
+</div>
 
-  <nav>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div><div></div><div></div>
-    </div>
-    <div class="nav-menu" id="navMenu">
-      <a href="#hero" onclick="toggleMenu()">Home</a>
-      <a href="#pillars" onclick="toggleMenu()">Pillars</a>
-      <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
-      <a href="#vision" onclick="toggleMenu()">Featured</a>
-      <a href="#join" onclick="toggleMenu()">Join</a>
-    </div>
   </nav>
-  <div id="overlay" onclick="closeMenu()"></div>
 
-  <header id="hero">
-    <img src="assets/raw-chxld-logo.png" alt="RAW CHXLD Logo" class="logo" />
-    <h1>RAW CHXLD COMPANY</h1>
-    <p class="tagline">From Streets to Sovereignty — Building the Future in Real Time</p>
-    <div class="buttons">
-      <button onclick="scrollToSection('pillars')">Enter Movement</button>
-      <button onclick="scrollToSection('vision')">Watch the Vision</button>
+  <header class="hero">
+    <img src="hero-performer.jpg" alt="Youth Performer" class="hero-img" />
+    <div class="hero-content">
+      <h1>Belong.<br>Move.<br>Shine.</h1>
+      <div class="hero-buttons">
+        <a href="#" id="videoBtn" class="btn secondary">Join us</a>
+        <a href="#donate" class="btn secondary">Donate</a>
+      </div>
     </div>
   </header>
 
-  <section id="pillars">
-    <h2>The Pillars of RAW CHXLD</h2>
-    <div class="pillar-grid">
-      <div class="pillar"><h3>Music Production</h3><p>Multi-Platinum Level Studio Infrastructure</p></div>
-      <div class="pillar"><h3>Artist Development</h3><p>Strategic Coaching, Writing & Branding</p></div>
-      <div class="pillar"><h3>Sync Brief Execution</h3><p>Film, TV & Brand Sound Design</p></div>
-      <div class="pillar"><h3>Sports Mentorship</h3><p>Pipeline Guidance for Rising Athletes</p></div>
+  <div id="videoModal" class="video-modal">
+    <div class="video-content">
+      <iframe src="https://www.youtube.com/embed/_TkEySTCmAI" frameborder="0" allowfullscreen></iframe>
+      <span id="closeVideo">&times;</span>
+    </div>
+  </div>
+
+  <section class="impact" id="about">
+    <h2>From Hempstead to Hollywood</h2>
+    <p>One of our youngest dancers just got invited to an audition in Los Angeles — so young they had to set up a trust. It’s proof of what’s possible when young talent is nurtured with care.</p>
+    <div class="logos">
+      <img src="town.png" alt="Town of Hempstead" title="Official Town of Hempstead Endorsement" />
+      <img src="village.png" alt="Village of Hempstead" title="The Village of Hempstead Endorsement" />
+      <img src="senate.png" alt="New York State Senate" title="New York State Senate Endorsement" />
     </div>
   </section>
 
-  <section id="portfolio">
-    <h2>Our Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item"><img src="assets/portfolio-producer.png"><div class="overlay">Multi-Platinum Producer</div></div>
-      <div class="portfolio-item"><img src="assets/portfolio-engineer.png"><div class="overlay">Audio Engineer</div></div>
-      <div class="portfolio-item"><img src="assets/portfolio-artist-dev.png"><div class="overlay">Artist Development</div></div>
-      <div class="portfolio-item"><img src="assets/portfolio-sync.png"><div class="overlay">Sync Licensing</div></div>
-      <div class="portfolio-item"><img src="assets/portfolio-sports.png"><div class="overlay">Sports Mentorship</div></div>
+  <section class="programs" id="programs">
+    <h2>Our Values</h2>
+    <div class="grid">
+      <div>Performance</div>
+      <div>Mentorship</div>
+      <div>Discipline</div>
     </div>
   </section>
 
-  <section id="vision">
-    <h2 class="highlight-title">FEATURED VISION</h2>
-    <p class="highlight-sub">From Court to Culture</p>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/aPNiqgi-DLs"
-              title="NY Knicks Promo"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-    </div>
-  </section>
+  <!-- TEAM SECTION START -->
+<section id="team">
+  <h2>Who We Are</h2>
+  <div class="team-grid">
+    
+   
+  </div>
+</section>
+<!-- TEAM SECTION END -->
 
-  <section id="join">
-    <button class="cta">Join the Company</button>
-  </section>
 
-  <script>
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-    function toggleMenu() {
-      const nav = document.getElementById('navMenu');
-      const overlay = document.getElementById('overlay');
-      nav.classList.toggle('show');
-      overlay.classList.toggle('active');
-    }
-    function closeMenu() {
-      document.getElementById('navMenu').classList.remove('show');
-      document.getElementById('overlay').classList.remove('active');
-    }
-  </script>
+  <footer id="contact">
+    <p>&copy; 2025 Youth & Teen Performing Arts Group</p>
+    <a href="https://cash.app/$dvhowell" class="btn">Support the Movement</a>
+  </footer>
+
+  <a href="https://cash.app/$dvhowell" class="sticky-donate" target="_blank">Donate</a>
+
+  <script src="script.js"></script>
 </body>
 </html>
