@@ -425,6 +425,18 @@ body {
   margin-top: 20px;
 }
 
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-up.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 @media (max-width: 768px) {
   /* Global typography */
   .section-title {
