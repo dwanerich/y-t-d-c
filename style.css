@@ -1,177 +1,328 @@
-/* Reset and base styles */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Outfit', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
 }
 
-/* Header */
-.header {
+/* Sticky Navbar */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
-  padding: 16px 24px;
-  color: white;
-  position: relative;
+  padding: 20px 40px;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.logo {
-  font-size: 24px;
+.navbar .logo {
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
-/* Hamburger Menu */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  backdrop-filter: blur(8px);
+
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar ul li a:hover {
+  color: #ff3cac;
+  text-decoration: underline;
+}
+
+/* Hamburger Icon (Mobile) */
 .hamburger {
   display: none;
-  flex-direction: column;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.bar {
-  height: 4px;
-  width: 25px;
-  background-color: white;
-  margin: 4px 0;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Navigation */
-.nav {
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-}
-
-.nav-list a {
+  font-size: 28px;
   color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav {
-    position: absolute;
-    top: 64px;
-    right: 0;
-    background-color: #222;
-    width: 100%;
-    transform: translateY(-200%);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .nav.open {
-    transform: translateY(0);
-  }
-
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-  }
-}
-
-/* Hamburger Animation */
-.hamburger.open .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.open .bar:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.open .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  cursor: pointer;
 }
 
 /* Hero Section */
 .hero {
-  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+
+/* Ensure the carousel occupies full viewport */
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style for each slide */
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the video */
+.carousel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optional: Style navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
   color: #fff;
-  padding: 100px 20px;
+}
+
+/* Optional: Style pagination dots */
+.swiper-pagination-bullet {
+  background: #fff;
+}
+
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #111;
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.btn.secondary {
+  background-color: #444;
+  border-color: #444;
+}
+
+.btn.secondary:hover {
+  background-color: white;
+  color: #111;
+  border-color: white;
+}
+
+.sticky-donate {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ff3cac;
+  color: #fff;
+  padding: 14px 22px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 10px 20px rgba(255, 60, 172, 0.3);
+  transition: all 0.3s ease;
+}
+
+.sticky-donate:hover {
+  background: white;
+  color: #111;
+  transform: translateY(-3px);
+}
+
+/* Impact Section */
+.impact {
+  padding: 80px 40px;
   text-align: center;
 }
 
-.hero h2 {
-  font-size: 48px;
+.impact h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 24px;
+.logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+  padding: 0 20px;
 }
 
-/* Team Section */
-.team-section {
-  padding: 60px 20px;
-  background-color: #fff;
+.logos img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logos img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  filter: none;
+}
+
+/* Programs Section */
+.programs {
+  padding: 60px 40px;
   text-align: center;
 }
 
-.team-section h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-.team-cards {
+.grid {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
+  margin-top: 30px;
 }
 
-.team-card {
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 300px;
-  transition: transform 0.3s;
+.grid div {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-.team-card:hover {
-  transform: scale(1.05);
+.video-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.team-card img {
+.video-content {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 100px auto;
+  background: #000;
+}
+
+.video-content iframe {
   width: 100%;
-  height: auto;
+  height: 450px;
 }
 
-.card-content {
-  padding: 20px;
-  text-align: left;
-}
-
-.card-content h3 {
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-
-.card-content p {
-  margin-bottom: 10px;
-  font-size: 16px;
+#closeVideo {
+  position: absolute;
+  top: 10px; right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }
 
 /* Footer */
-.footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+footer {
+  background-color: #000;
+  color: #888;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  padding: 40px 20px;
+}
+
+footer .btn {
+  margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    z-index: 1001;
+    position: relative;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    padding-top: 100px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar ul li {
+    margin: 30px 0;
+  }
+
+  .navbar ul li a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 100%;
+    margin-top: 30px;
+  }
 }
