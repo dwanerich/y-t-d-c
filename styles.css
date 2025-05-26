@@ -369,4 +369,84 @@ body {
   margin-top: 20px;
 }
 
+@media (max-width: 768px) {
+  /* Global typography */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Hero section */
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Testimonial & Impact Grid */
+  .testimonial-cards,
+  .impact-metrics,
+  .program-grid,
+  .donation-grid,
+  .involve-grid,
+  .donate-blocks {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .testimonial-card,
+  .impact-card,
+  .program-card,
+  .donation-card,
+  .donate-option,
+  .involve-card {
+    width: 90%;
+    max-width: 360px;
+  }
+
+  /* Get Involved Cards */
+  .involve-card {
+    height: auto;
+    padding: 24px 16px;
+  }
+
+  .involve-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .involve-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Donate block buttons */
+  .donate-btn {
+    width: 90%;
+    max-width: 300px;
+    font-size: 1rem;
+    padding: 14px 24px;
+  }
+
+  /* Footer tweaks */
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-credit {
+    font-size: 0.8rem;
+  }
+}
+
+
 
