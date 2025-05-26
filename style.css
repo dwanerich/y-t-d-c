@@ -4,6 +4,88 @@
   padding: 0;
 }
 
+.our-values {
+  background: #fff;
+  padding: 60px 20px;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-align: center;
+}
+
+.our-values h2 {
+  font-size: 3em;
+  margin-bottom: 50px;
+  color: #802400;
+  letter-spacing: 2px;
+}
+
+.value-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.value-block {
+  flex: 1 1 400px;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.text-block {
+  color: #fff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.text-block h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.text-block p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Color themes */
+.belonging {
+  background-color: #6a3d2c;
+}
+
+.movement {
+  background-color: #9d2a1f;
+}
+
+.excellence {
+  background-color: #e9a941;
+  color: #222;
+}
+
+.culture {
+  background-color: #c8561d;
+}
+
+.family {
+  background-color: #a0331a;
+}
+
+
 /* Header Container */
 .header {
   display: flex;
