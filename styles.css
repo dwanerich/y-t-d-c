@@ -294,7 +294,7 @@ body {
 .btn.donate-btn {
   display: inline-block;
   padding: 14px 32px;
-  background: transparent;
+  background: #d92ed9;
   color: white;
   font-weight: bold;
   font-size: 1rem;
@@ -304,7 +304,8 @@ body {
 }
 
 .btn.donate-btn:hover {
-  background: #d92ed9;
+  background: transparent;
+  border-color: #d92ed9;
 }
 
 .get-involved-section {
