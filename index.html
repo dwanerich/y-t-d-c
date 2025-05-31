@@ -9,6 +9,29 @@
 
 </head>
 <body>
+
+  <!-- ✅ NAVBAR HTML -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">YATPAG</div>
+    <div class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="nav-menu" id="navMenu">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#donate">Donate</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#get-involved">Get Involved</a></li>
+    </ul>
+  </nav>
+</header>
+
   <section class="hero-section gif-hero fade-up">
      <img src="assets/images/spark.png" class="parallax-layer" data-speed="2">
     <img src="assets/images/glow.png" class="parallax-layer" data-speed="1">
@@ -202,6 +225,20 @@
       if (confirmed) {
         window.open(url, '_blank');
       }
+    });
+  });
+
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('navMenu');
+  const body = document.body;
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('nav-open');
+  });
+
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      body.classList.remove('nav-open');
     });
   });
 </script>

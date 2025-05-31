@@ -6,6 +6,109 @@ body {
   color: #fff;
 }
 
+/* ✅ NAVBAR CSS */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: transparent;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+}
+
+.nav-logo {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nav-toggle {
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.4s ease;
+}
+
+.nav-menu ul {
+  list-style: none;
+  text-align: center;
+}
+
+.nav-menu ul li {
+  margin: 20px 0;
+}
+
+.nav-menu ul li a {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #ff2aad;
+  transition: width 0.3s ease;
+}
+
+.nav-menu ul li a:hover::after {
+  width: 60%;
+}
+
+.nav-open .nav-menu {
+  left: 0;
+}
+
+.nav-open .nav-toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.nav-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-open .nav-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
 .section-title, .impact-title {
   text-align: center;
   font-size: 3em;
