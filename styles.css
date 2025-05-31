@@ -294,7 +294,7 @@ body {
 .btn.donate-btn {
   display: inline-block;
   padding: 14px 32px;
-  background: #e81cd0;
+  background: transparent;
   color: white;
   font-weight: bold;
   font-size: 1rem;

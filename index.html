@@ -192,7 +192,19 @@
   <p class="footer-credit">© 2025 Youth & Teen Performing Arts Group. All rights reserved.</p>
 </footer>
 
-
+<script>
+  document.querySelectorAll('.donation-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const cashAppUsername = 'DWHowell';
+      const amount = card.getAttribute('data-amount');
+      const url = `https://cash.app/$${cashAppUsername}/${amount}`;
+      const confirmed = confirm(`You're about to donate $${amount} to YATPAG via Cash App. Continue?`);
+      if (confirmed) {
+        window.open(url, '_blank');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
