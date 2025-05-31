@@ -516,7 +516,7 @@ body {
     font-size: 0.8rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .impact-card img {
     width: 120px;
   }
