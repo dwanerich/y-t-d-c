@@ -177,8 +177,9 @@ body {
 }
 
 .impact-card img {
-  width: 80px;
+  width: 12px;
   margin-bottom: 20px;
+  border-radius: 12px;
 }
 
 .impact-card h3 {
