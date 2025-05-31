@@ -177,7 +177,7 @@ body {
 }
 
 .impact-card img {
-  width: 48px;
+  width: 80px;
   margin-bottom: 20px;
 }
 
@@ -514,6 +514,11 @@ body {
 
   .footer-credit {
     font-size: 0.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .impact-card img {
+    width: 120px;
   }
 }
 
