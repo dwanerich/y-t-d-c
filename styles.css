@@ -124,7 +124,7 @@ body {
 }
 
 .gif-hero {
-  background: transparent;
+  background: url('assets/images/hero.gif') no-repeat center center;
   background-size: cover;
   height: 100vh;
   position: relative;
@@ -134,17 +134,6 @@ body {
   overflow: hidden;
 }
 
-.hero-section {
-  background-image: url('/assets/bg-image.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
 
 .hero-content {
   position: absolute;
