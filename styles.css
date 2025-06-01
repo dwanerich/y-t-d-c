@@ -306,6 +306,46 @@ body {
   font-size: 0.9rem;
   color: #ccc;
 }
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.logo-card {
+  background: #1b1b1b;
+  border-radius: 20px;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  transform: scale(1);
+  overflow: hidden;
+}
+
+.logo-card img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, transform 0.3s ease;
+}
+
+.logo-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(255, 42, 173, 0.3);
+}
+
+.logo-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
 /* Team Section Styling */
 .team-section {
   padding: 4rem 2rem;
