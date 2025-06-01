@@ -284,21 +284,7 @@
     observer.observe(card);
   });
 
-   const toggle = document.getElementById('navToggle');
-  const whiteSection = document.querySelector('.white-section');
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        toggle.classList.add('black');
-      } else {
-        toggle.classList.remove('black');
-      }
-    },
-    {
-      threshold: 0.5,
-    }
-  );
+   
 
   if (whiteSection) observer.observe(whiteSection);
 </script>
