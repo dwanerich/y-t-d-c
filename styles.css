@@ -70,7 +70,7 @@ body {
 
 .nav-menu ul li a {
   color: white;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -85,7 +85,7 @@ body {
   transform: translateX(-50%);
   width: 0%;
   height: 2px;
-  background-color: fuchsia;
+  background-color: #ff2aad;
   transition: width 0.3s ease;
 }
 
@@ -173,7 +173,7 @@ body {
 }
 
 .btn.primary {
-  background: fuchsia;
+  background: #ee3fb1;
   color: white;
 }
 
@@ -232,7 +232,7 @@ body {
 }
 
 .program-info h3 {
-  color: fuchsia;
+  color: #d239d8;
   font-size: 1.2rem;
   font-weight: 800;
   margin-bottom: 10px;
@@ -271,7 +271,7 @@ body {
 }
 
 .testimonial-text strong {
-  color: fuchsia;
+  color: #d738e0;
 }
 
 .impact-metrics {
@@ -298,7 +298,7 @@ body {
 }
 
 .impact-card .label {
-  color: fuchsia;
+  color: #c92fb2;
   font-weight: 700;
 }
 
@@ -306,100 +306,6 @@ body {
   font-size: 0.9rem;
   color: #ccc;
 }
-
-/* Section Styling */
-.nba-highlights {
-  background: #0b0b0b;
-  padding: 100px 30px;
-  text-align: center;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-}
-
-.nba-highlights .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Title Styling */
-.section-title {
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 60px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  background: linear-gradient(to right, rgb(239, 10, 239), fuchsia;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fadeIn 1s ease forwards;
-}
-
-/* Grid Layout */
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 30px;
-  justify-items: center;
-}
-
-.logo-card {
-  background: fuchsia;
-  border-radius: 20px;
-  width: 160px;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-  transition: all 0.4s ease;
-  transform: scale(1);
-  overflow: hidden;
-}
-
-.logo-card img {
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-  filter: grayscale(100%);
-  transition: filter 0.4s ease, transform 0.3s ease;
-}
-
-.logo-card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 30px rgba(255, 42, 173, 0.3);
-}
-
-.logo-card:hover img {
-  filter: grayscale(0%);
-  transform: scale(1.05);
-}
-
-@media (min-width: 768px) {
-  .logo-card {
-    width: 200px;
-    height: 200px;
-  }
-}
-/* Scroll Animation */
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Team Section Styling */
 .team-section {
   padding: 4rem 2rem;
@@ -498,7 +404,7 @@ body {
 .btn.donate-btn {
   display: inline-block;
   padding: 14px 32px;
-  background: fuchsia;
+  background: #d92ed9;
   color: white;
   font-weight: bold;
   font-size: 1rem;
@@ -509,7 +415,7 @@ body {
 
 .btn.donate-btn:hover {
   background: transparent;
-  border-color: fuchsia;
+  border-color: #d92ed9;
 }
 
 .get-involved-section {
@@ -559,7 +465,7 @@ body {
 }
 
 .involve-card.orange {
-  background-color: fuchsia
+  background-color: #f023f0;
   color: #fff4e6;
 }
 
@@ -592,7 +498,7 @@ body {
 .footer-brand h2 {
   font-size: 2rem;
   font-weight: 900;
-  color: fuchsia;
+  color: #f53fff;
   margin-bottom: 10px;
 }
 
@@ -610,7 +516,7 @@ body {
 }
 
 .footer-links a:hover {
-  color: fuchsia;
+  color: #ff3ffc;
 }
 
 .footer-credit {
@@ -719,7 +625,11 @@ body {
     font-size: 0.8rem;
   }
 }
-
+@media (min-width: 768px) {
+  .impact-card img {
+    width: 100px;
+  }
+}
 
 
 
