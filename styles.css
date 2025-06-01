@@ -124,7 +124,7 @@ body {
 }
 
 .gif-hero {
-  background: url('assets/images/hero.gif') no-repeat center center;
+  background: transparent;
   background-size: cover;
   height: 100vh;
   position: relative;
