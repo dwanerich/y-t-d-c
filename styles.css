@@ -44,6 +44,12 @@ body {
   background: #fff;
   border-radius: 2px;
   transition: all 0.4s ease;
+  transition: background 0.3s ease;
+}
+
+/* Toggle to black */
+.nav-toggle.black span {
+  background: black;
 }
 
 .nav-menu {

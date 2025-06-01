@@ -15,12 +15,10 @@
   <div class="nav-container">
     <div class="nav-logo">YATPAG</div>
     <div class="nav-toggle" id="navToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-  <nav class="nav-menu" id="navMenu">
+      <span class="nav-toggle"></span>
+      <span class="nav-toggle" ></span>
+      <span class="nav-toggle"></span>
+
     <ul>
       <li><a href="#hero">Home</a></li>
       <li><a href="#programs">Programs</a></li>
@@ -108,7 +106,7 @@
     </div>
   </section>
 
-  <section id="impact" class="impact-section fade-up">
+  <section id="impact" class="impact-section fade-up white-section">
     <h2 class="impact-title">OUR IMPACT</h2>
     <div class="impact-metrics">
       <div class="impact-card">
@@ -281,6 +279,24 @@
     card.style.animationPlayState = 'paused';
     observer.observe(card);
   });
+
+   const toggle = document.getElementById('navToggle');
+  const whiteSection = document.querySelector('.white-section');
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        toggle.classList.add('black');
+      } else {
+        toggle.classList.remove('black');
+      }
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  if (whiteSection) observer.observe(whiteSection);
 </script>
 
 </body>
