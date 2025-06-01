@@ -132,6 +132,29 @@
     </div>
   </section>
 
+  <section class="nba-highlights fade-down" id="nba-highlights">
+  <div class="container">
+    <h2 class="section-title">NBA Halftime Highlights</h2>
+    <div class="logo-grid">
+      <!-- Replace with your actual NBA team logos -->
+      <div class="logo-card">
+        <img src="/assets/team1.png" alt="NBA Team 1" />
+      </div>
+      <div class="logo-card">
+        <img src="/assets/team2.png" alt="NBA Team 2" />
+      </div>
+      <div class="logo-card">
+        <img src="/assets/team3.png" alt="NBA Team 3" />
+      </div>
+      <div class="logo-card">
+        <img src="/assets/team4.png" alt="NBA Team 4" />
+      </div>
+      <!-- Add more logo cards as needed -->
+    </div>
+  </div>
+</section>
+
+
   <!-- Team Section -->
 <section  id="team" class="team-section fade-up">
     <h2 class="section-title" style="color: black;">OUR TEAM</h2>
@@ -243,6 +266,21 @@
     link.addEventListener('click', () => {
       body.classList.remove('nav-open');
     });
+  });
+
+   const cards = document.querySelectorAll('.logo-card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cards.forEach(card => {
+    card.style.animationPlayState = 'paused';
+    observer.observe(card);
   });
 </script>
 
