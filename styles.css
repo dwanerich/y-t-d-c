@@ -12,15 +12,8 @@ body {
   top: 0;
   width: 100%;
   z-index: 999;
-  background-image: url('/assets/images/bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  z-index: 1;}
+  background: transparent;
+}
 
 .nav-container {
   display: flex;
@@ -124,6 +117,12 @@ body {
   margin-bottom: 60px;
 }
 
+.top-banner {
+  width: 100%;
+  z-index: 10;
+  position: relative;
+}
+
 .gif-hero {
   background: url('assets/images/hero.gif') no-repeat center center;
   background-size: cover;
@@ -136,7 +135,7 @@ body {
 }
 
 .hero-section {
-  background-image: url('/assets/images/bg.png');
+  background-image: url('/assets/bg-image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
