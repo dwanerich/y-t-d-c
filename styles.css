@@ -339,42 +339,48 @@ body {
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 40px;
-  padding: 0 10px;
+  gap: 30px;
+  justify-items: center;
 }
 
-/* Card Styling */
 .logo-card {
-  background: #1c1c1c;
-  padding: 24px;
-  border-radius: 18px;
+  background: #1b1b1b;
+  border-radius: 20px;
+  width: 160px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  transform: translateY(40px);
-  animation: slideUp 0.8s forwards;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  transform: scale(1);
+  overflow: hidden;
 }
 
 .logo-card img {
-  max-width: 100%;
-  max-height: 70px;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
   filter: grayscale(100%);
-  transition: filter 0.3s ease;
+  transition: filter 0.4s ease, transform 0.3s ease;
 }
 
-/* Hover Effects */
 .logo-card:hover {
-  transform: scale(1.07);
-  box-shadow: 0 12px 30px rgba(255, 42, 173, 0.4);
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(255, 42, 173, 0.3);
 }
 
 .logo-card:hover img {
   filter: grayscale(0%);
+  transform: scale(1.05);
 }
 
+@media (min-width: 768px) {
+  .logo-card {
+    width: 200px;
+    height: 200px;
+  }
+}
 /* Scroll Animation */
 @keyframes slideUp {
   to {
@@ -713,11 +719,7 @@ body {
     font-size: 0.8rem;
   }
 }
-@media (min-width: 768px) {
-  .impact-card img {
-    width: 100px;
-  }
-}
+
 
 
 
